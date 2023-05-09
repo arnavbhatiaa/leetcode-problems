@@ -1,0 +1,23 @@
+Class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int length= nums.length;
+       int target1=-1;
+       int target2=-1;
+        for (int i=0;i<length;i++){
+            if (nums[i]==target){
+                target1=i;
+                break;
+            }}
+            for (int j=0;j<length;j++){
+                if (nums[j]==target){
+                    target2=j;
+                }
+            }
+            int[] array= new int[2];
+            array[0]=target1;
+            array[1]=target2;
+
+            return array;
+
+        }
+    }
