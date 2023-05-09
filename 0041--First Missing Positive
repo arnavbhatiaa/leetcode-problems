@@ -1,0 +1,32 @@
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int length= nums.length;
+        Arrays.sort(nums);
+        int one=-1;
+       for (int i=0;i<length;i++){
+            if (nums[i]==1){
+                one=i;
+            }}
+            if (one==-1){
+                return 1;
+            }
+   int count=1;
+    for (int j=one;j<length;j++){
+        if (nums[j]==count){
+            count++;
+            continue;
+        }
+
+        else if (nums[j]==count-1){
+            continue;
+        }
+        else if (nums[j]!=count){
+            return count;
+        }
+       
+        
+    }
+    return count;
+
+    }
+}
