@@ -1,0 +1,63 @@
+class Solution {
+    public String intToRoman(int num) {
+        HashMap <Character, Integer> map = new HashMap<>();
+      
+       String x="";
+       while(num>0){
+        if (num>=1000){
+            num=num-1000;
+            x=x+"M";
+        }
+      else  if (num>=900 && num<1000){
+            x=x+"C";
+            num=num+100;
+        }
+        else if (num>=500 ){
+             x=x+"D";
+             num=num-500;
+        }
+        else if (num>=400 && num<500){
+            x=x+"C";
+            num=num+100;
+        }
+        else if (num>=100 && num<400){
+            x=x+"C";
+            num=num-100;
+        }
+        else if (num>=90 && num<100){
+            x=x+"X";
+            num=num+10;
+        }
+        else if (num>=50 && num<90){
+            x=x+"L";
+            num=num-50;
+        }
+        else if (num>=40 && num<50){
+            x=x+"X";
+            num=num+10;
+        }
+        else if (num>=10 && num<40){
+            x=x+"X";
+            num=num-10;
+        }
+        else if (num>=9 && num<10){
+            x=x+"I";
+            num=num+1;
+        }
+        else if (num>=5 && num<9){
+            x=x+"V";
+            num=num-5;
+        }
+        else if (num>=4 && num<5){
+            x=x+"I";
+            num=num+1;
+        }
+        else if (num>=1 && num<4){
+            x=x+"I";
+            num--;
+        }
+       }
+       return x;
+   
+    }
+}
